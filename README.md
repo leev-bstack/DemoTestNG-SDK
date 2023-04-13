@@ -41,7 +41,10 @@ mvn test -P fail
 ```
 mvn test -P observability
 ```
-
+7. Run tests for Appium. This will run the wikipedia sample app with 5 Android devices
+```
+mvn test -P appium
+```
 ## Notes
 
 ---
