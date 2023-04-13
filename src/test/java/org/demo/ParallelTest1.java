@@ -12,7 +12,7 @@ import org.testng.annotations.*;
 
 import java.time.Duration;
 
-public class ParallelTest
+public class ParallelTest1
 {
     public WebDriver driver;
 
@@ -22,25 +22,13 @@ public class ParallelTest
     }
 
     @Test
-    public void Test1() throws Exception {
+    public void googleSearch() throws Exception {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.get("https://google.com/");
         WebElement search = wait.until(ExpectedConditions.elementToBeClickable(By.name("q")));
         search.sendKeys("BrowserStack", Keys.ENTER);
         String title = driver.getTitle();
         Assert.assertEquals(title, title);
-
-    }
-    @Test
-    public void Test2() throws Exception {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
-        driver.get("https://bstackdemo.com/");
-        wait.until(ExpectedConditions.titleIs("StackDemo"));
-    }
-    @Test
-    public void Test3() throws Exception {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        driver.get("https://browserstack.com/");
     }
 
     @AfterMethod(alwaysRun = true)

@@ -2,13 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.example</groupId>
+  <groupId>org.demo</groupId>
   <artifactId>Demo</artifactId>
   <version>1.0-SNAPSHOT</version>
 
   <name>Demo</name>
-  <!-- FIXME change it to the project's website -->
-  <url>http://www.example.com</url>
+  <url>https://github.com/leev-bstack/DemoTestNG-SDK</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -140,6 +139,23 @@
       </build>
     </profile>
     <profile>
+      <id>single</id>
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>${surefire.version}</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>config/single.testng.xml</suiteXmlFile>
+              </suiteXmlFiles>
+              <argLine>-javaagent:${com.browserstack:browserstack-java-sdk:jar}</argLine>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
       <id>parallel</id>
       <build>
         <plugins>
@@ -160,7 +176,7 @@
       </build>
     </profile>
     <profile>
-      <id>single</id>
+      <id>fail</id>
       <build>
         <plugins>
           <plugin>
@@ -168,9 +184,72 @@
             <version>${surefire.version}</version>
             <configuration>
               <suiteXmlFiles>
-                <suiteXmlFile>config/single.testng.xml</suiteXmlFile>
+                <suiteXmlFile>config/fail.testng.xml</suiteXmlFile>
               </suiteXmlFiles>
               <argLine>-javaagent:${com.browserstack:browserstack-java-sdk:jar}</argLine>
+              <systemPropertyVariables>
+                <browserstack.config>fail.browserstack.yml</browserstack.config>
+              </systemPropertyVariables>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>observability</id>
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>${surefire.version}</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>config/observability.testng.xml</suiteXmlFile>
+              </suiteXmlFiles>
+              <argLine>-javaagent:${com.browserstack:browserstack-java-sdk:jar}</argLine>
+              <systemPropertyVariables>
+                <browserstack.config>observability.browserstack.yml</browserstack.config>
+              </systemPropertyVariables>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>local</id>
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>${surefire.version}</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>config/local.testng.xml</suiteXmlFile>
+              </suiteXmlFiles>
+              <argLine>-javaagent:${com.browserstack:browserstack-java-sdk:jar}</argLine>
+              <systemPropertyVariables>
+                <browserstack.config>local.browserstack.yml</browserstack.config>
+              </systemPropertyVariables>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>mobile</id>
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>${surefire.version}</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>config/mobile.testng.xml</suiteXmlFile>
+              </suiteXmlFiles>
+              <argLine>-javaagent:${com.browserstack:browserstack-java-sdk:jar}</argLine>
+              <systemPropertyVariables>
+                <browserstack.config>mobile.browserstack.yml</browserstack.config>
+              </systemPropertyVariables>
             </configuration>
           </plugin>
         </plugins>

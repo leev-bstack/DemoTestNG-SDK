@@ -1,8 +1,8 @@
 userName:
 accessKey:
 
-projectName: TestNG Demos
-buildName: Parallel Demo TestNG
+projectName: TestNG Observability
+buildName: Observability Demo TestNG
 buildIdentifier: '#${BUILD_NUMBER}'
 
 platforms:
@@ -24,35 +24,15 @@ platforms:
     browserVersion: latest
   - os: OS X
     osVersion: Ventura
-    browser: Chrome
-    browserVersion: latest
-  - os: Windows
-    osVersion: 11
-    browser: Firefox
-    browserVersion: latest
-  - os: OS X
-    osVersion: Ventura
-    browser: Safari
-    browserVersion: latest
-  - os: OS X
-    osVersion: Monterey
-    browser: Safari
-    browserVersion: latest
-  - os: OS X
-    osVersion: Monterey
-    browser: Chrome
-    browserVersion: latest
-  - os: Windows
-    osVersion: 10
     browser: firefox
     browserVersion: latest
 
-parallelsPerPlatform: 3
+parallelsPerPlatform: 5
 
 source: testng:archetype-setup:v1.5
 
 browserstackLocal: false
 
 debug: false
-networkLogs: false
+networkLogs: true
 consoleLogs: errors

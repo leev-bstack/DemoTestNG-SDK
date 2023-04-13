@@ -1,0 +1,33 @@
+userName:
+accessKey:
+
+projectName: TestNG Demos
+buildName: Mobile Demo TestNG
+buildIdentifier: '#${BUILD_NUMBER}'
+
+platforms:
+  - deviceName: Samsung Galaxy S23
+    osVersion: 13.0
+    browserName: samsung
+  - deviceName: Samsung Galaxy S22 Ultra
+    osVersion: 12.0
+    browserName: chrome
+  - deviceName: Google Pixel 7 Pro
+    osVersion: 13.0
+    browserName: chrome
+  - deviceName: iPhone 14 Pro Max
+    osVersion: 16
+    browserName: safari
+  - deviceName: iPad 10th
+    osVersion: 16
+    browserName: safari
+
+parallelsPerPlatform: 1
+
+source: testng:archetype-setup:v1.5
+
+browserstackLocal: false
+
+debug: false
+networkLogs: false
+consoleLogs: errors

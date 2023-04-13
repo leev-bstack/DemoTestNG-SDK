@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="ParallelTest" parallel="methods">
-    <test name="ParallelTest" parallel="methods">
+<suite name="ObservabilityTest" parallel="methods">
+    <test name="ObservabilityTest" parallel="methods">
         <classes>
             <class name="org.demo.ParallelTest1" />
             <class name="org.demo.ParallelTest2" />
             <class name="org.demo.ParallelTest3" />
+            <class name="org.demo.Fail" />
+            <class name="org.demo.Flaky" />
         </classes>
     </test>
 </suite>

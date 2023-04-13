@@ -25,7 +25,7 @@ public class SingleTest
     public void searchDataCenters(){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.manage().window().maximize();
-        //go to browsestack
+        //go to browserstack
         driver.get("https://browserstack.com/");
         //search for data centers
         driver.findElement(By.xpath("//li[@class='hide-sm hide-xs']")).click();

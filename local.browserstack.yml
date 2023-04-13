@@ -1,0 +1,32 @@
+userName:
+accessKey:
+
+projectName: TestNG Demos
+buildName: Local Demo TestNG
+buildIdentifier: '#${BUILD_NUMBER}'
+
+platforms:
+  - os: OS X
+    osVersion: Big Sur
+    browser: Chrome
+    browserVersion: latest
+  - os: Windows
+    osVersion: 10
+    browser: Edge
+    browserVersion: latest
+  - deviceName: Google Pixel 7 Pro
+    osVersion: 13.0
+    browserName: chrome
+  - deviceName: iPhone 14 Pro Max
+    osVersion: 16
+    browserName: safari
+
+parallelsPerPlatform: 1
+
+source: testng:archetype-setup:v1.5
+
+browserstackLocal: true
+
+debug: false
+networkLogs: false
+consoleLogs: errors
