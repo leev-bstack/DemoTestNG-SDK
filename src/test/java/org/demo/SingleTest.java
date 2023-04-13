@@ -13,7 +13,7 @@ import java.time.Duration;
 
 public class SingleTest
 {
-    public static WebDriver driver;
+    public WebDriver driver;
 
     @BeforeMethod
     public void startDriver(){
