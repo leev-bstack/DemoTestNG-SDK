@@ -43,6 +43,11 @@
       <version>LATEST</version>
       <scope>compile</scope>
     </dependency>
+    <dependency>
+      <groupId>io.appium</groupId>
+      <artifactId>java-client</artifactId>
+      <version>8.3.0</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -249,6 +254,26 @@
               <argLine>-javaagent:${com.browserstack:browserstack-java-sdk:jar}</argLine>
               <systemPropertyVariables>
                 <browserstack.config>mobile.browserstack.yml</browserstack.config>
+              </systemPropertyVariables>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>appium</id>
+      <build>
+        <plugins>
+          <plugin>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>${surefire.version}</version>
+            <configuration>
+              <suiteXmlFiles>
+                <suiteXmlFile>config/appium.testng.xml</suiteXmlFile>
+              </suiteXmlFiles>
+              <argLine>-javaagent:${com.browserstack:browserstack-java-sdk:jar}</argLine>
+              <systemPropertyVariables>
+                <browserstack.config>appium.browserstack.yml</browserstack.config>
               </systemPropertyVariables>
             </configuration>
           </plugin>

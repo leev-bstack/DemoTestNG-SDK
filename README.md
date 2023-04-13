@@ -15,6 +15,7 @@ BrowserStack CE demo repo using [BrowserStack Java SDK](https://mvnrepository.co
 
 ---
 
+### Please check the ChromeDriver test before a demo!!!  This will automatically update to the correct, newest version of the ChromeDriver, but Mac might block it and require a security approval every time it updates.
 
 1. Run a test on a local chromedriver to demonstrate the test before integration.
 ```

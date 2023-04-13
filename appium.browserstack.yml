@@ -1,0 +1,31 @@
+userName:
+accessKey:
+
+projectName: TestNG Demos
+buildName: Appium Demo TestNG
+buildIdentifier: '#${BUILD_NUMBER}'
+
+framework: testng
+
+app: ./WikipediaSample.apk
+
+platforms:
+  - deviceName: Samsung Galaxy S23
+    osVersion: 13.0
+  - deviceName: Samsung Galaxy S22 Ultra
+    osVersion: 12.0
+  - deviceName: Google Pixel 7 Pro
+    osVersion: 13.0
+  - deviceName: Google Pixel 6
+    osVersion: 12.0
+  - deviceName: Samsung Galaxy S21 Ultra
+    osVersion: 11.0
+
+parallelsPerPlatform: 1
+
+source: testng:archetype-setup:v1.5
+
+browserstackLocal: false
+
+debug: false
+networkLogs: false
