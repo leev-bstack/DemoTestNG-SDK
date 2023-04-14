@@ -33,7 +33,7 @@ mvn test -P parallel
 ```
 mvn test -P local
 ```
-5. Run a test that will fail. This will demonstrate the test automatic marking of failed tests
+5. Run a test that will fail. This will demonstrate the automatic marking of failed tests
 ```
 mvn test -P fail
 ```
