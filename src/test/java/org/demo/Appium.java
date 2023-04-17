@@ -21,7 +21,7 @@ public class Appium {
     @BeforeMethod(alwaysRun=true)
     public void setUp() throws Exception {
         MutableCapabilities capabilities = new UiAutomator2Options();
-        driver = new AndroidDriver(new URL("https://hub.browserstack.com/wd/hub"),capabilities);
+        driver = new AndroidDriver(new URL("http://localhost:4444/wd/hub"),capabilities);
     }
     @Test
     public void testApp() throws Exception {
