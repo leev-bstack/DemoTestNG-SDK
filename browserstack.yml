@@ -9,9 +9,25 @@ buildIdentifier: '#${BUILD_NUMBER}'
 framework: testng
 
 platforms:
+  - os: OS X
+    osVersion: Ventura
+    browser: Safari
+    browserVersion: latest
+  - os: OS X
+    osVersion: Monterey
+    browser: Chrome
+    browserVersion: latest
+  - os: Windows
+    osVersion: 10
+    browser: Edge
+    browserVersion: latest
   - os: Windows
     osVersion: 11
-    browserName: Chrome
+    browser: Chrome
+    browserVersion: latest
+  - os: OS X
+    osVersion: Ventura
+    browser: firefox
     browserVersion: latest
 
 parallelsPerPlatform: 1

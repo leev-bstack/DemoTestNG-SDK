@@ -40,7 +40,7 @@ public class ParallelTest2
         Assert.assertTrue(driver.findElement(By.cssSelector(".float\\-cart__content")).isDisplayed());
 
         // Check the product inside the cart is same as of the main page
-        String productOnCartText = driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div/div[2]/div[2]/div[2]/div/div[3]/p[1]")).getText();
+        String productOnCartText = driver.findElement(By.cssSelector(".float-cart__content .title")).getText();
         Assert.assertEquals(productOnScreenText, productOnCartText);
     }
 

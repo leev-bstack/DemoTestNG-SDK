@@ -28,6 +28,6 @@ source: testng:archetype-setup:v1.5
 
 browserstackLocal: false
 
-debug: false
-networkLogs: false
+debug: true
+networkLogs: true
 consoleLogs: errors
