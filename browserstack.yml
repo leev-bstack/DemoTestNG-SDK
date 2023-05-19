@@ -14,7 +14,7 @@ platforms:
     browser: Safari
     browserVersion: latest
   - os: OS X
-    osVersion: Monterey
+    osVersion: Ventura
     browser: Chrome
     browserVersion: latest
   - os: Windows
@@ -26,7 +26,7 @@ platforms:
     browser: Chrome
     browserVersion: latest
   - os: OS X
-    osVersion: Ventura
+    osVersion: Monterey
     browser: firefox
     browserVersion: latest
 
