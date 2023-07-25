@@ -45,7 +45,7 @@ mvn test -P observability
 ```
 mvn test -P appium
 ```
-8. Run tests for a11y.  Works with Group 2 already, but this needs to be enabled for your demo account.
+8. Run tests for a11y.  This needs to be enabled for your demo account.
 ```
 mvn test -P a11y
 ```
