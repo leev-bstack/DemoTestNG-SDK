@@ -1,0 +1,25 @@
+userName:
+accessKey:
+
+projectName: TestNG A11y
+
+buildName: A11y Demo
+
+buildIdentifier: '#${BUILD_NUMBER}'
+framework: testng
+
+platforms:
+  - os: Windows
+    osVersion: 11
+    browser: Chrome
+    browserVersion: latest
+
+parallelsPerPlatform: 3
+
+accessibility: true
+source: testng:archetype-setup:v1.5
+
+browserstackLocal: false
+debug: true
+networkLogs: true
+consoleLogs: errors

@@ -26,9 +26,10 @@ public class ParallelTest3
 
     @Test
     public void browserStackTitle() throws Exception {
+        driver.manage().window().maximize();
         driver.get("https://browserstack.com/");
-        String title = driver.getTitle();
-        Assert.assertEquals(title, title);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        wait.until(ExpectedConditions.titleIs("Most Reliable App & Cross Browser Testing Platform | BrowserStack"));
     }
 
 

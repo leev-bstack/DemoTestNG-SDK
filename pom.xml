@@ -280,5 +280,25 @@
         </plugins>
       </build>
     </profile>
+  <profile>
+    <id>a11y</id>
+    <build>
+      <plugins>
+        <plugin>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>${surefire.version}</version>
+          <configuration>
+            <suiteXmlFiles>
+              <suiteXmlFile>config/a11y.testng.xml</suiteXmlFile>
+            </suiteXmlFiles>
+            <argLine>-javaagent:${com.browserstack:browserstack-java-sdk:jar}</argLine>
+            <systemPropertyVariables>
+              <browserstack.config>a11y.browserstack.yml</browserstack.config>
+            </systemPropertyVariables>
+          </configuration>
+        </plugin>
+      </plugins>
+    </build>
+  </profile>
   </profiles>
 </project>
