@@ -14,7 +14,7 @@ platforms:
     browser: Chrome
     browserVersion: latest
 
-parallelsPerPlatform: 1
+parallelsPerPlatform: 3
 
 accessibility: true
 source: testng:archetype-setup:v1.5

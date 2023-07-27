@@ -3,9 +3,7 @@
 <suite name="ParallelTest" parallel="methods">
     <test name="ParallelTest" parallel="methods">
         <classes>
-            <class name="org.demo.ParallelTest1" />
-            <class name="org.demo.ParallelTest2" />
-            <class name="org.demo.ParallelTest3" />
+            <class name="org.demo.A11y" />
         </classes>
     </test>
 </suite>
