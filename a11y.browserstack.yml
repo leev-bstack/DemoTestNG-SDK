@@ -17,6 +17,12 @@ platforms:
 parallelsPerPlatform: 3
 
 accessibility: true
+#accessibilityOptions:
+#  wcagVersion: wcag21aaa # Default: wcag21aa
+#  includeIssueType:
+#    bestPractice: true # Default: false
+#    needsReview: true # Default: true
+
 source: testng:archetype-setup:v1.5
 
 browserstackLocal: false

@@ -29,6 +29,7 @@ public class A11y
         search.sendKeys("BrowserStack", Keys.ENTER);
         String title = driver.getTitle();
         Assert.assertEquals(title, title);
+        Thread.sleep(3000);
     }
     @Test
     public void bStackDemo() throws Exception {
@@ -49,6 +50,7 @@ public class A11y
         // Check the product inside the cart is same as of the main page
         String productOnCartText = driver.findElement(By.cssSelector(".float-cart__content .title")).getText();
         Assert.assertEquals(productOnScreenText, productOnCartText);
+        Thread.sleep(3000);
     }
     @Test
     public void browserStackTitle() throws Exception {
@@ -56,7 +58,7 @@ public class A11y
         driver.get("https://browserstack.com/");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         wait.until(ExpectedConditions.titleIs("Most Reliable App & Cross Browser Testing Platform | BrowserStack"));
-        Thread.sleep(2000);
+        Thread.sleep(3000);
     }
 
 
