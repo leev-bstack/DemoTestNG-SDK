@@ -1,6 +1,5 @@
 package org.demo;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -17,7 +16,6 @@ public class SingleTest
 
     @BeforeMethod
     public void startDriver(){
-        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
     }
 
@@ -28,7 +26,8 @@ public class SingleTest
         //go to browserstack
         driver.get("https://browserstack.com/");
         //search for data centers
-        driver.findElement(By.xpath("//li[@class='hide-sm hide-xs']")).click();
+        WebElement search = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//li[@class='hide-sm hide-xs']")));
+        search.click();
         driver.findElement(By.name("query")).sendKeys("Data Centers");
         driver.findElement(By.cssSelector(".ds__input__handle--submit")).click();
         //click on the correct result
