@@ -14,7 +14,6 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <surefire.version>3.0.0-M5</surefire.version>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <selenium.version>4.1.4</selenium.version>
     <testng.version>7.4.0</testng.version>
     <config.file>config/single.testng.xml</config.file>
   </properties>
@@ -23,19 +22,20 @@
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
-      <version>7.7.1</version>
+      <version>7.8.0</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
-      <version>4.13.0</version>
+      <version>4.15.0</version>
+      <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>io.github.bonigarcia</groupId>
       <artifactId>webdrivermanager</artifactId>
-      <version>4.4.3</version>
-      <scope>test</scope>
+      <version>5.6.2</version>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>com.browserstack</groupId>
@@ -46,7 +46,7 @@
     <dependency>
       <groupId>io.appium</groupId>
       <artifactId>java-client</artifactId>
-      <version>8.3.0</version>
+      <version>9.0.0</version>
     </dependency>
   </dependencies>
 
@@ -191,7 +191,7 @@
               <suiteXmlFiles>
                 <suiteXmlFile>config/fail.testng.xml</suiteXmlFile>
               </suiteXmlFiles>
-              <argLine>-javaagent:${com.browserstack:browserstack-java-sdk:jar}</argLine>
+              d
               <systemPropertyVariables>
                 <browserstack.config>fail.browserstack.yml</browserstack.config>
               </systemPropertyVariables>
