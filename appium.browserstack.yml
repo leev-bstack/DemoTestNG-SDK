@@ -29,3 +29,4 @@ browserstackLocal: false
 
 debug: false
 networkLogs: true
+appProfiling: true
