@@ -16,7 +16,7 @@ import java.util.List;
 
 public class Appium {
 
-    public AppiumDriver driver;
+    public AndroidDriver driver;
 
     @BeforeMethod(alwaysRun=true)
     public void setUp() throws Exception {
